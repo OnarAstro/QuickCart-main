@@ -12,32 +12,35 @@ const Navbar = () => {
 
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700">
-      <Image
-        className="cursor-pointer w-28 md:w-32"
-        onClick={() => router.push("/")}
-        src={assets.logo}
-        alt="logo"
-      />
-      <div className="flex items-center gap-4 lg:gap-8 max-md:hidden">
+      <div className="flex items-center gap-2">
+        <Image
+          className="cursor-pointer w-9 md:w-11"
+          onClick={() => router.push("/")}
+          src={assets.logo}
+          alt="logo"
+        />
+        {/* <span className="text-2xl font-bold"></span> */}
+      </div>
+      <div className="flex items-center gap-4 lg:gap-8 max-md:hidden text-lg">
         <Link href="/" className="hover:text-gray-900 transition">
-          Home
+          الرئيسية
         </Link>
         <Link href="/all-products" className="hover:text-gray-900 transition">
-          Shop
+          المنتجات
         </Link>
         <Link href="/" className="hover:text-gray-900 transition">
-          About Us
+          من نحن
         </Link>
         <Link href="/" className="hover:text-gray-900 transition">
-          Contact
+          اتصل بنا
         </Link>
 
         {isSeller && (
           <button
             onClick={() => router.push("/seller")}
-            className="text-xs border px-4 py-1.5 rounded-full"
+            className="text-s border px-4 py-1.5 rounded-full"
           >
-            Seller Dashboard
+            لوحة البائع
           </button>
         )}
       </div>
@@ -49,14 +52,14 @@ const Navbar = () => {
             <UserButton>
               <UserButton.MenuItems>
                 <UserButton.Action
-                  label="Cart"
+                  label="السلة"
                   labelIcon={<CartIcon />}
                   onClick={() => router.push("/cart")}
                 />
               </UserButton.MenuItems>
               <UserButton.MenuItems>
                 <UserButton.Action
-                  label="My Orders"
+                  label="طلباتي"
                   labelIcon={<BagIcon />}
                   onClick={() => router.push("/my-orders")}
                 />
@@ -69,7 +72,7 @@ const Navbar = () => {
             className="flex items-center gap-2 hover:text-gray-900 transition"
           >
             <Image src={assets.user_icon} alt="user icon" />
-            Account
+            حسابي
           </button>
         )}
       </ul>
@@ -80,7 +83,7 @@ const Navbar = () => {
             onClick={() => router.push("/seller")}
             className="text-xs border px-4 py-1.5 rounded-full"
           >
-            Seller Dashboard
+            لوحة البائع
           </button>
         )}
         {user ? (
@@ -88,28 +91,28 @@ const Navbar = () => {
             <UserButton>
               <UserButton.MenuItems>
                 <UserButton.Action
-                  label="Home"
+                  label="الرئيسية"
                   labelIcon={<HomeIcon />}
                   onClick={() => router.push("/")}
                 />
               </UserButton.MenuItems>
               <UserButton.MenuItems>
                 <UserButton.Action
-                  label="Products"
+                  label="المنتجات"
                   labelIcon={<BoxIcon />}
                   onClick={() => router.push("/all-products")}
                 />
               </UserButton.MenuItems>
               <UserButton.MenuItems>
                 <UserButton.Action
-                  label="Cart"
+                  label="السلة"
                   labelIcon={<CartIcon />}
                   onClick={() => router.push("/cart")}
                 />
               </UserButton.MenuItems>
               <UserButton.MenuItems>
                 <UserButton.Action
-                  label="My Orders"
+                  label="طلباتي"
                   labelIcon={<BagIcon />}
                   onClick={() => router.push("/my-orders")}
                 />
@@ -122,7 +125,7 @@ const Navbar = () => {
             className="flex items-center gap-2 hover:text-gray-900 transition"
           >
             <Image src={assets.user_icon} alt="user icon" />
-            Account
+            حسابي
           </button>
         )}
       </div>

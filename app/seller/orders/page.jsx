@@ -45,7 +45,7 @@ const Orders = () => {
         <Loading />
       ) : (
         <div className="md:p-10 p-4 space-y-5">
-          <h2 className="text-lg font-medium">Orders</h2>
+          <h2 className="text-lg font-medium">الطلبات</h2>
           <div className="max-w-4xl rounded-md">
             {orders.map((order, index) => (
               <div
@@ -90,9 +90,9 @@ const Orders = () => {
                   <p className="flex flex-col">
                     <span>Method : COD</span>
                     <span>
-                      Date : {new Date(order.date).toLocaleDateString()}
+                      التاريخ : {new Date(order.date).toLocaleDateString()}
                     </span>
-                    <span>Payment : Pending</span>
+                    <span>الدفع: معلق</span>
                   </p>
                 </div>
               </div>

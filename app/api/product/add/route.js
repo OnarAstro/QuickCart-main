@@ -78,6 +78,6 @@ export async function POST(request) {
 
 
     } catch (error) {
-        NextResponse.json({ success: false, message: error.message })
+       return NextResponse.json({ success: false, message: error.message })
     }
 }
